@@ -1,4 +1,5 @@
-FROM node:20-alpine AS frontend-builder
+FROM registry.redhat.io/ubi9/nodejs-24:latest AS frontend-builder
+USER root
 WORKDIR /app/frontend
 
 COPY frontend/package.json frontend/package-lock.json* ./
