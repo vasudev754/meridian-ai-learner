@@ -1,5 +1,4 @@
-FROM registry.redhat.io/ubi9/nodejs-24:latest AS frontend-builder
-USER root
+FROM node:24-slim AS frontend-builder
 WORKDIR /app/frontend
 
 COPY frontend/package.json frontend/package-lock.json* ./
